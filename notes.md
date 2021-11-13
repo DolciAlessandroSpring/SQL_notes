@@ -3,6 +3,10 @@
 SELECT title
 FROM films;
 ```
+This not only works with columns, but also with basic math
+```
+SELECT (10 / 3);
+```
 <br/>
 
 ## DISTINCT
@@ -40,3 +44,32 @@ SELECT name
 FROM kids
 WHERE age IN (2, 4, 6, 8, 10);
 ```
+
+<br/>
+
+## AGGREGATION
+You can use `AVG`, `MAX`, `MIN`, `SUM`.
+```
+SELECT AVG(budget)
+FROM films;
+```
+You can obviously add a `WHERE` after this.
+```
+SELECT SUM(budget)
+FROM films
+WHERE release_year >= 2010;
+```
+
+<br/>
+
+## AS
+Use it for renaming.
+```
+SELECT MAX(budget) AS max_budget,
+       MAX(duration) AS max_duration
+FROM films;
+```
+
+<br/>
+
+## ORDER BY
