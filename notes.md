@@ -73,3 +73,8 @@ FROM films;
 <br/>
 
 ## ORDER BY
+```
+SELECT name, birthdate
+FROM people
+ORDER BY birthdate DESC/ASC (ASC is default)
+```
