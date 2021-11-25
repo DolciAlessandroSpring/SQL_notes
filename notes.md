@@ -78,3 +78,12 @@ SELECT name, birthdate
 FROM people
 ORDER BY birthdate DESC/ASC (ASC is default)
 ```
+
+<br/>
+
+## GROUP BY
+```
+SELECT sex, count(*)
+FROM employees
+GROUP BY sex;
+```
