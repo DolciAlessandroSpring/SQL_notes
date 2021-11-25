@@ -94,3 +94,10 @@ FROM films
 GROUP BY release_year
 HAVING COUNT(title) > 200;
 ```
+But you can't use the column name in the HAVING.
+```
+SELECT release_year, AVG(budget) AS avg_budget
+FROM films
+GROUP BY release_year
+HAVING AVG(budget) > 60000000
+```
