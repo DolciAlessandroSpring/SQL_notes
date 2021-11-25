@@ -81,9 +81,16 @@ ORDER BY birthdate DESC/ASC (ASC is default)
 
 <br/>
 
-## GROUP BY
+## GROUP BY / HAVING
 ```
 SELECT sex, count(*)
 FROM employees
 GROUP BY sex;
+```
+It is possible to apply filters on columns created via a grouping function.
+```
+SELECT release_year
+FROM films
+GROUP BY release_year
+HAVING COUNT(title) > 200;
 ```
