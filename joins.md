@@ -18,3 +18,11 @@ SELECT c.code, c.name, c.region, p.year, p.fertility_rate
     ON c.code = p.country_code
 ```
 One can simply add N different joins one after another.
+
+<br>
+
+You can join on multiple columns, concatenating the logic
+```
+[ ... ]
+ON A.col1 = B.col1 AND A.col2 = B.col2
+```
