@@ -26,3 +26,6 @@ You can join on multiple columns, concatenating the logic
 [ ... ]
 ON A.col1 = B.col1 AND A.col2 = B.col2
 ```
+
+<br><br><br>
+## USING
