@@ -28,6 +28,7 @@ ON A.col1 = B.col1 AND A.col2 = B.col2
 ```
 
 <br>
+
 ## USING
 There's a different way of writing the condition if the tables have the same name. Note the brackets.
 ```
