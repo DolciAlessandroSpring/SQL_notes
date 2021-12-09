@@ -64,3 +64,4 @@ SELECT name, continent, surface_area,
        AS geosize_group
 FROM countries;
 ```
+Note that all the `CASE` is basically a new column to select.
