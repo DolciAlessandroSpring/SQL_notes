@@ -47,5 +47,20 @@ SELECT p1.country_code,
        p2.size AS size2015
 FROM populations as p1
   INNER JOIN populations as p2
-    ON p1.country_code = p2.country_code
+    ON p1.country_code = p2.country_code;
+```
+
+<br>
+
+## CASE
+Use it to create new columns with an `IF / ELSE` approach.
+```
+SELECT name, continent, surface_area,
+    CASE WHEN surface_area > 2000000
+            THEN 'large'
+       WHEN surface_area > 350000
+            THEN 'medium'
+       ELSE 'small' END
+       AS geosize_group
+FROM countries;
 ```
