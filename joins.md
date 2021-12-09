@@ -65,3 +65,23 @@ SELECT name, continent, surface_area,
 FROM countries;
 ```
 Note that all the `CASE` is basically a new column to select.
+
+
+<br>
+
+## INTO
+It is possible to save a result of a query with a specific name. And use it in a different query.
+```
+SELECT country_code, size,
+    CASE WHEN size > 50000000 THEN 'large'
+        WHEN size > 1000000 THEN 'medium'
+        ELSE 'small' END
+        AS popsize_group
+INTO pop_plus
+FROM populations
+
+-- different query
+SELECT *
+FROM pop_plus
+```
+
