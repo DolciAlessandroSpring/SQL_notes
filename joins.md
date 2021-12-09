@@ -27,5 +27,12 @@ You can join on multiple columns, concatenating the logic
 ON A.col1 = B.col1 AND A.col2 = B.col2
 ```
 
-<br><br><br>
+<br>
 ## USING
+There's a different way of writing the condition if the tables have the same name. Note the brackets.
+```
+SELECT c.name AS country, l.name AS languages
+FROM countries AS c
+INNER JOIN languages AS l
+USING (code)
+```
